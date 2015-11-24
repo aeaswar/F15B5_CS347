@@ -1,0 +1,236 @@
+DROP SEQUENCE F15B5_RFE_seq ; 
+create sequence F15B5_RFE_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER F15B5_RFE_PK_trig 
+; 
+
+create or replace trigger F15B5_RFE_PK_trig 
+before insert on F15B5_RFE
+for each row 
+begin 
+select F15B5_RFE_seq.nextval into :new.rfe_id from dual; 
+end; 
+/
+
+DROP SEQUENCE F15B5_auth_seq ; 
+create sequence F15B5_auth_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER F15B5_auth_PK_trig 
+; 
+
+create or replace trigger F15B5_auth_PK_trig 
+before insert on F15B5_auth
+for each row 
+begin 
+select F15B5_auth_seq.nextval into :new.auth_id from dual; 
+end; 
+/
+
+DROP SEQUENCE F15B5_comm_seq ; 
+create sequence F15B5_comm_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER F15B5_comm_PK_trig 
+; 
+
+create or replace trigger F15B5_comm_PK_trig 
+before insert on F15B5_comm
+for each row 
+begin 
+select F15B5_comm_seq.nextval into :new.comm_id from dual; 
+end; 
+/
+
+create or replace trigger F15B5_comm_entry_date_trig
+before insert on F15B5_comm
+for each row
+begin
+select SYSDATE into :new.entry_date from dual;
+end;
+/
+
+DROP SEQUENCE F15B5_doc_seq ; 
+create sequence F15B5_doc_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER F15B5_doc_PK_trig 
+; 
+
+create or replace trigger F15B5_doc_PK_trig 
+before insert on F15B5_doc
+for each row 
+begin 
+select F15B5_doc_seq.nextval into :new.doc_id from dual; 
+end; 
+/
+
+DROP SEQUENCE F15B5_emp_seq ; 
+create sequence F15B5_emp_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER F15B5_emp_PK_trig 
+; 
+
+create or replace trigger F15B5_emp_PK_trig 
+before insert on F15B5_emp
+for each row 
+begin 
+select F15B5_emp_seq.nextval into :new.emp_id from dual; 
+end; 
+/
+
+create or replace trigger F15B5_multiple_flag_trig
+before insert on F15B5_emp
+for each row
+DECLARE 
+  exec_dir_flag    VARCHAR(1);
+  chair_flag       VARCHAR(1);
+  admin_flag       VARCHAR(1);
+  lab_dir_flag     VARCHAR(1);
+begin
+	IF (:new.exec_dir_flag = 'Y' AND (:new.chair_flag = 'Y' OR :new.lab_dir_flag = 'Y' OR :new.admin_flag = 'Y')) THEN
+		raise_application_error(-20001, 'Emp cannot have multiple flags');
+	ELSIF (:new.chair_flag = 'Y' AND (:new.lab_dir_flag = 'Y' OR :new.admin_flag = 'Y')) THEN
+		raise_application_error(-20001, 'Emp cannot have multiple flags');
+	ELSIF (:new.lab_dir_flag = 'Y' AND :new.admin_flag = 'Y') THEN
+		raise_application_error(-20001, 'Emp cannot have multiple flags');
+	END IF;
+end;
+/
+
+create or replace trigger F15B5_emp_type_trig
+before insert on F15B5_emp
+for each row
+DECLARE
+  exec_dir_flag    VARCHAR2(1);
+  chair_flag       VARCHAR2(1);
+  admin_flag       VARCHAR2(1);
+  lab_dir_flag     VARCHAR2(1);
+
+begin
+	case
+		when :new.exec_dir_flag = 'Y' then :new.type := 'Executive Director';
+		when :new.chair_flag = 'Y' then :new.type := 'Chairperson';
+		when :new.lab_dir_flag = 'Y' then :new.type := 'Lab Director';
+		when :new.admin_flag = 'Y' then :new.type := 'System Admin';
+    else :new.type := 'Employee';
+	end case;
+end;
+/
+
+DROP SEQUENCE F15B5_hist_seq ; 
+create sequence F15B5_hist_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER F15B5_hist_PK_trig 
+; 
+
+create or replace trigger F15B5_hist_PK_trig 
+before insert on F15B5_hist
+for each row 
+begin 
+select F15B5_hist_seq.nextval into :new.hist_id from dual; 
+end; 
+/
+
+create or replace trigger F15B5_hist_eff_date_trig
+before insert on F15B5_hist
+for each row
+begin
+select SYSDATE into :new.eff_date from dual;
+end;
+/
+
+DROP SEQUENCE F15B5_lab_seq ; 
+create sequence F15B5_lab_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER F15B5_lab_PK_trig 
+; 
+
+create or replace trigger F15B5_lab_PK_trig 
+before insert on F15B5_lab
+for each row 
+begin 
+select F15B5_lab_seq.nextval into :new.lab_id from dual; 
+end; 
+/
+
+DROP SEQUENCE F15B5_status_seq ; 
+create sequence F15B5_status_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER F15B5_status_PK_trig 
+; 
+
+create or replace trigger F15B5_status_PK_trig 
+before insert on F15B5_status
+for each row 
+begin 
+select F15B5_status_seq.nextval into :new.status_id from dual; 
+end; 
+/
+
+DROP SEQUENCE F15B5_task_seq ; 
+create sequence F15B5_task_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+DROP TRIGGER F15B5_task_PK_trig 
+; 
+
+create or replace trigger F15B5_task_PK_trig 
+before insert on F15B5_task
+for each row 
+begin 
+select F15B5_task_seq.nextval into :new.task_id from dual; 
+end; 
+/
+
+DROP INDEX F15B5_emp_emp_id_FK_0 ;
+CREATE INDEX F15B5_emp_emp_id_FK_0 ON F15B5_RFE(F15B5_emp_emp_id) ;
+DROP INDEX F15B5_status_status_id_FK_1 ;
+CREATE INDEX F15B5_status_status_id_FK_1 ON F15B5_RFE(F15B5_status_status_id) ;
+DROP INDEX F15B5_RFE_rfe_id_FK_2 ;
+CREATE INDEX F15B5_RFE_rfe_id_FK_2 ON F15B5_comm(F15B5_RFE_rfe_id) ;
+DROP INDEX F15B5_emp_emp_id_FK_3 ;
+CREATE INDEX F15B5_emp_emp_id_FK_3 ON F15B5_comm(F15B5_emp_emp_id) ;
+DROP INDEX F15B5_RFE_rfe_id_FK_4 ;
+CREATE INDEX F15B5_RFE_rfe_id_FK_4 ON F15B5_doc(F15B5_RFE_rfe_id) ;
+DROP INDEX F15B5_auth_auth_id_FK_5 ;
+CREATE INDEX F15B5_auth_auth_id_FK_5 ON F15B5_emp(F15B5_auth_auth_id) ;
+DROP INDEX F15B5_lab_lab_id_FK_6 ;
+CREATE INDEX F15B5_lab_lab_id_FK_6 ON F15B5_emp(F15B5_lab_lab_id) ;
+DROP INDEX F15B5_RFE_rfe_id_FK_7 ;
+CREATE INDEX F15B5_RFE_rfe_id_FK_7 ON F15B5_hist(F15B5_RFE_rfe_id) ;
+DROP INDEX F15B5_RFE_rfe_id_FK_8 ;
+CREATE INDEX F15B5_RFE_rfe_id_FK_8 ON approvers(F15B5_RFE_rfe_id) ;
+DROP INDEX F15B5_emp_emp_id_FK_9 ;
+CREATE INDEX F15B5_emp_emp_id_FK_9 ON approvers(F15B5_emp_emp_id) ;
+DROP INDEX F15B5_RFE_rfe_id_FK_10 ;
+CREATE INDEX F15B5_RFE_rfe_id_FK_10 ON contacts(F15B5_RFE_rfe_id) ;
+DROP INDEX F15B5_emp_emp_id_FK_11 ;
+CREATE INDEX F15B5_emp_emp_id_FK_11 ON contacts(F15B5_emp_emp_id) ;
+DROP INDEX F15B5_RFE_rfe_id_FK_12 ;
+CREATE INDEX F15B5_RFE_rfe_id_FK_12 ON rfe_task(F15B5_RFE_rfe_id) ;
+DROP INDEX F15B5_task_task_id_FK_13 ;
+CREATE INDEX F15B5_task_task_id_FK_13 ON rfe_task(F15B5_task_task_id) ;
