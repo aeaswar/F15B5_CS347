@@ -1,15 +1,19 @@
--- Truncate each of the sample data tables using the following statement:
-truncate table F15B5_LAB;
-truncate table F15B5_AUTH;
-truncate table F15B5_EMP;
-truncate table F15B5_STATUS;
-truncate table F15B5_RFE;
-truncate table F15B5_COMM;
-truncate table APPROVERS;
-truncate table CONTACTS;
+ALTER TABLE F15B5_RFE DISABLE CONSTRAINT F15B5_RFE_F15B5_emp_FK;
+ALTER TABLE F15B5_RFE DISABLE CONSTRAINT F15B5_RFE_F15B5_status_FK;
+ALTER TABLE F15B5_comm DISABLE CONSTRAINT F15B5_comm_F15B5_RFE_FK;
+ALTER TABLE F15B5_comm DISABLE CONSTRAINT F15B5_comm_F15B5_emp_FK;
+ALTER TABLE F15B5_doc DISABLE CONSTRAINT F15B5_doc_F15B5_RFE_FK;
+ALTER TABLE F15B5_emp DISABLE CONSTRAINT F15B5_emp_F15B5_auth_FK;
+ALTER TABLE F15B5_emp DISABLE CONSTRAINT F15B5_emp_F15B5_lab_FK;
+ALTER TABLE F15B5_hist DISABLE CONSTRAINT F15B5_hist_F15B5_RFE_FK;
+ALTER TABLE approvers DISABLE CONSTRAINT approvers_F15B5_RFE_FK;
+ALTER TABLE approvers DISABLE CONSTRAINT approvers_F15B5_emp_FK;
+ALTER TABLE contacts DISABLE CONSTRAINT contacts_F15B5_RFE_FK;
+ALTER TABLE contacts DISABLE CONSTRAINT contacts_F15B5_emp_FK;
+ALTER TABLE rfe_task DISABLE CONSTRAINT rfe_task_F15B5_RFE_FK;
+ALTER TABLE rfe_task DISABLE CONSTRAINT rfe_task_F15B5_task_FK;
 
--- Disable the PK triggers on the sample data tables using the following statement:
-alter trigger F15B5_RFE_PK_trig disable; -- for example - alter trigger DEPT_VIEW_TRIGGER disable;
+alter trigger F15B5_RFE_PK_trig disable;
 alter trigger F15B5_auth_PK_trig disable;
 alter trigger F15B5_comm_PK_trig disable;
 alter trigger F15B5_doc_PK_trig disable;
@@ -19,9 +23,15 @@ alter trigger F15B5_lab_PK_trig disable;
 alter trigger F15B5_status_PK_trig disable;
 alter trigger F15B5_task_PK_trig disable;
 
+truncate table F15B5_LAB;
+truncate table F15B5_AUTH;
+truncate table F15B5_EMP;
+truncate table F15B5_STATUS;
+truncate table F15B5_RFE;
+truncate table F15B5_COMM;
+truncate table APPROVERS;
+truncate table CONTACTS;
 
--- Put all of the sample data INSERT statements here. Be sure to use PK and FK values that
--- are < 100 so that they won't be reapeated by the PK triggers when they are re-enabled.
 INSERT INTO F15B5_LAB (LAB_ID, LAB_NAME) VALUES (10, 'ADMIN');
 INSERT INTO F15B5_LAB (LAB_ID, LAB_NAME) VALUES (20, 'ITSS');
 INSERT INTO F15B5_LAB (LAB_ID, LAB_NAME) VALUES (30, 'RESEARCH');
@@ -69,7 +79,7 @@ INSERT INTO F15B5_RFE (RFE_ID, EXPLANATION, ALT_PROTECT, APPROVAL_REV, F15B5_STA
 	VALUES (2, 'Need admin rights to download software', 'limit to 5 hours', '', 2, 5);
 
 INSERT INTO F15B5_COMM (COMM_ID, COMMENTS, F15B5_EMP_EMP_ID, F15B5_RFE_RFE_ID) 
-	VALUES ('Need to download python', 5, 2);
+	VALUES (1, 'Need to download python', 5, 2);
 
 INSERT INTO APPROVERS (F15B5_RFE_RFE_ID, F15B5_EMP_EMP_ID) VALUES (1, 1);
 INSERT INTO APPROVERS (F15B5_RFE_RFE_ID, F15B5_EMP_EMP_ID) VALUES (1, 2);
@@ -82,10 +92,22 @@ INSERT INTO APPROVERS (F15B5_RFE_RFE_ID, F15B5_EMP_EMP_ID) VALUES (2, 5);
 
 INSERT INTO CONTACTS (F15B5_RFE_RFE_ID, F15B5_EMP_EMP_ID) VALUES (1, 6);
 
+ALTER TABLE F15B5_RFE ENABLE CONSTRAINT F15B5_RFE_F15B5_emp_FK;
+ALTER TABLE F15B5_RFE ENABLE CONSTRAINT F15B5_RFE_F15B5_status_FK;
+ALTER TABLE F15B5_comm ENABLE CONSTRAINT F15B5_comm_F15B5_RFE_FK;
+ALTER TABLE F15B5_comm ENABLE CONSTRAINT F15B5_comm_F15B5_emp_FK;
+ALTER TABLE F15B5_doc ENABLE CONSTRAINT F15B5_doc_F15B5_RFE_FK;
+ALTER TABLE F15B5_emp ENABLE CONSTRAINT F15B5_emp_F15B5_auth_FK;
+ALTER TABLE F15B5_emp ENABLE CONSTRAINT F15B5_emp_F15B5_lab_FK;
+ALTER TABLE F15B5_hist ENABLE CONSTRAINT F15B5_hist_F15B5_RFE_FK;
+ALTER TABLE approvers ENABLE CONSTRAINT approvers_F15B5_RFE_FK;
+ALTER TABLE approvers ENABLE CONSTRAINT approvers_F15B5_emp_FK;
+ALTER TABLE contacts ENABLE CONSTRAINT contacts_F15B5_RFE_FK;
+ALTER TABLE contacts ENABLE CONSTRAINT contacts_F15B5_emp_FK;
+ALTER TABLE rfe_task ENABLE CONSTRAINT rfe_task_F15B5_RFE_FK;
+ALTER TABLE rfe_task ENABLE CONSTRAINT rfe_task_F15B5_task_FK;
 
-
--- Enable the PK triggers on the sample data tables using the following statement:
-alter trigger F15B5_RFE_PK_trig enable; -- for example - alter trigger DEPT_VIEW_TRIGGER enable;
+alter trigger F15B5_RFE_PK_trig enable;
 alter trigger F15B5_auth_PK_trig enable;
 alter trigger F15B5_comm_PK_trig enable;
 alter trigger F15B5_doc_PK_trig enable;
