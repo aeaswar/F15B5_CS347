@@ -21,22 +21,22 @@ Neo4j on conn "CREATE (:assign { ASSIGN_ID : 401, TYPE : 'Project', NAME : 'Pict
 Neo4j on conn "CREATE (:assign { ASSIGN_ID : 402, TYPE : 'Project', NAME : 'Billboard Design', DATE_GIVEN : '16-NOV-2015', DATE_DUE : '16-DEC-2015', GRADE : '90', COMMENTS : '', CLASS_ID : 40})"
 
 
-Neo4j on conn "CREATE (:foo { CLASS_ID : 10, CLASS_NAME : 'English', TEACHER : 'Garrison' })"
-Neo4j on conn "CREATE (:foo { CLASS_ID : 20, CLASS_NAME : 'Calculus', TEACHER : 'Dever' })"
-Neo4j on conn "CREATE (:foo { CLASS_ID : 30, CLASS_NAME : 'Chemistry', TEACHER : 'Rivera' })"
-Neo4j on conn "CREATE (:foo { CLASS_ID : 40, CLASS_NAME : 'Graphic Design', TEACHER : 'Vercammen' })"
+Neo4j on conn "CREATE (:subject { CLASS_ID : 10, CLASS_NAME : 'English', TEACHER : 'Garrison' })"
+Neo4j on conn "CREATE (:subject { CLASS_ID : 20, CLASS_NAME : 'Calculus', TEACHER : 'Dever' })"
+Neo4j on conn "CREATE (:subject { CLASS_ID : 30, CLASS_NAME : 'Chemistry', TEACHER : 'Rivera' })"
+Neo4j on conn "CREATE (:subject { CLASS_ID : 40, CLASS_NAME : 'Graphic Design', TEACHER : 'Vercammen' })"
 
-Neo4j on conn "MATCH (a:assign),(b:foo) WHERE a.CLASS_ID = 10 AND b.CLASS_ID = 10 CREATE (a)<-[:assignments]-(b)"
-Neo4j on conn "MATCH (a:assign),(b:foo) WHERE a.CLASS_ID = 20 AND b.CLASS_ID = 20 CREATE (a)<-[:assignments]-(b)"
-Neo4j on conn "MATCH (a:assign),(b:foo) WHERE a.CLASS_ID = 30 AND b.CLASS_ID = 30 CREATE (a)<-[:assignments]-(b)"
-Neo4j on conn "MATCH (a:assign),(b:foo) WHERE a.CLASS_ID = 40 AND b.CLASS_ID = 40 CREATE (a)<-[:assignments]-(b)"
+Neo4j on conn "MATCH (a:assign),(b:subject) WHERE a.CLASS_ID = 10 AND b.CLASS_ID = 10 CREATE (a)<-[:assignments]-(b)"
+Neo4j on conn "MATCH (a:assign),(b:subject) WHERE a.CLASS_ID = 20 AND b.CLASS_ID = 20 CREATE (a)<-[:assignments]-(b)"
+Neo4j on conn "MATCH (a:assign),(b:subject) WHERE a.CLASS_ID = 30 AND b.CLASS_ID = 30 CREATE (a)<-[:assignments]-(b)"
+Neo4j on conn "MATCH (a:assign),(b:subject) WHERE a.CLASS_ID = 40 AND b.CLASS_ID = 40 CREATE (a)<-[:assignments]-(b)"
 
-Neo4j on conn "MATCH(a:assign)<-[:assignments]-(b:foo) WHERE b.CLASS_ID = 20 RETURN b, a.TYPE, a.NAME, a.GRADE, a.COMMENTS"
+Neo4j on conn "MATCH(a:assign)<-[:assignments]-(b:subject) WHERE b.CLASS_ID = 20 RETURN b, a.TYPE, a.NAME, a.GRADE, a.COMMENTS"
 
 
-Neo4j on conn "MATCH (a:assign),(b:foo) WHERE a.CLASS_ID = 10 AND b.CLASS_ID = 10 CREATE (a)-[:classes]->(b)"
-Neo4j on conn "MATCH (a:assign),(b:foo) WHERE a.CLASS_ID = 20 AND b.CLASS_ID = 20 CREATE (a)-[:classes]->(b)"
-Neo4j on conn "MATCH (a:assign),(b:foo) WHERE a.CLASS_ID = 30 AND b.CLASS_ID = 30 CREATE (a)-[:classes]->(b)"
-Neo4j on conn "MATCH (a:assign),(b:foo) WHERE a.CLASS_ID = 40 AND b.CLASS_ID = 40 CREATE (a)-[:classes]->(b)"
+Neo4j on conn "MATCH (a:assign),(b:subject) WHERE a.CLASS_ID = 10 AND b.CLASS_ID = 10 CREATE (a)-[:classes]->(b)"
+Neo4j on conn "MATCH (a:assign),(b:subject) WHERE a.CLASS_ID = 20 AND b.CLASS_ID = 20 CREATE (a)-[:classes]->(b)"
+Neo4j on conn "MATCH (a:assign),(b:subject) WHERE a.CLASS_ID = 30 AND b.CLASS_ID = 30 CREATE (a)-[:classes]->(b)"
+Neo4j on conn "MATCH (a:assign),(b:subject) WHERE a.CLASS_ID = 40 AND b.CLASS_ID = 40 CREATE (a)-[:classes]->(b)"
 
-Neo4j on conn "MATCH(a:assign)-[:classes]->(b:foo)  RETURN b.CLASS_NAME, a.NAME"
+Neo4j on conn "MATCH(a:assign)-[:classes]->(b:subject)  RETURN b.CLASS_NAME, a.NAME"
