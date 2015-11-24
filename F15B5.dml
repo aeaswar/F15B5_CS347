@@ -1,0 +1,96 @@
+-- Truncate each of the sample data tables using the following statement:
+truncate table F15B5_LAB;
+truncate table F15B5_AUTH;
+truncate table F15B5_EMP;
+truncate table F15B5_STATUS;
+truncate table F15B5_RFE;
+truncate table F15B5_COMM;
+truncate table APPROVERS;
+truncate table CONTACTS;
+
+-- Disable the PK triggers on the sample data tables using the following statement:
+alter trigger F15B5_RFE_PK_trig disable; -- for example - alter trigger DEPT_VIEW_TRIGGER disable;
+alter trigger F15B5_auth_PK_trig disable;
+alter trigger F15B5_comm_PK_trig disable;
+alter trigger F15B5_doc_PK_trig disable;
+alter trigger F15B5_emp_PK_trig disable;
+alter trigger F15B5_hist_PK_trig disable;
+alter trigger F15B5_lab_PK_trig disable;
+alter trigger F15B5_status_PK_trig disable;
+alter trigger F15B5_task_PK_trig disable;
+
+
+-- Put all of the sample data INSERT statements here. Be sure to use PK and FK values that
+-- are < 100 so that they won't be reapeated by the PK triggers when they are re-enabled.
+INSERT INTO F15B5_LAB (LAB_ID, LAB_NAME) VALUES (10, 'ADMIN');
+INSERT INTO F15B5_LAB (LAB_ID, LAB_NAME) VALUES (20, 'ITSS');
+INSERT INTO F15B5_LAB (LAB_ID, LAB_NAME) VALUES (30, 'RESEARCH');
+INSERT INTO F15B5_LAB (LAB_ID, LAB_NAME) VALUES (40, 'OTHER');
+
+INSERT INTO F15B5_AUTH (AUTH_ID, RIGHT) VALUES (1, 'NONE');
+INSERT INTO F15B5_AUTH (AUTH_ID, RIGHT) VALUES (2, 'VIEW');
+INSERT INTO F15B5_AUTH (AUTH_ID, RIGHT) VALUES (3, 'EDIT');
+
+INSERT INTO F15B5_EMP (EMP_ID, ENAME, EMP_EMAIL, EMP_OFFICE, EMP_PHONE, EMP_STATUS, STATUS_EFF, F15B5_LAB_LAB_ID, EXEC_DIR_FLAG, LAB_DIR_FLAG, ADMIN_FLAG, CHAIR_FLAG, F15B5_AUTH_AUTH_ID) 
+	VALUES (1, 'Clark Clayton', 'clarkclayton@gmail.com', 'A100', '512-905-2263', 'A', '1-1-2000', 10, 'Y', '', '', '', 3);
+INSERT INTO F15B5_EMP (EMP_ID, ENAME, EMP_EMAIL, EMP_OFFICE, EMP_PHONE, EMP_STATUS, STATUS_EFF, F15B5_LAB_LAB_ID, EXEC_DIR_FLAG, LAB_DIR_FLAG, ADMIN_FLAG, CHAIR_FLAG, F15B5_AUTH_AUTH_ID) 
+	VALUES (2, 'Ankita Easwar', 'ankitaeaswar@gmail.com', 'A200', '512-263-1344', 'A', '1-03-2000', 10, '', '', '', 'Y', 3);
+INSERT INTO F15B5_EMP (EMP_ID, ENAME, EMP_EMAIL, EMP_OFFICE, EMP_PHONE, EMP_STATUS, STATUS_EFF, F15B5_LAB_LAB_ID, EXEC_DIR_FLAG, LAB_DIR_FLAG, ADMIN_FLAG, CHAIR_FLAG, F15B5_AUTH_AUTH_ID) 
+	VALUES (3, 'Jack Clayton', 'jackclayton@gmail.com', 'B100', '512-925-3333', 'A', '3-02-2009', 20, '', '', '', '', 1);
+INSERT INTO F15B5_EMP (EMP_ID, ENAME, EMP_EMAIL, EMP_OFFICE, EMP_PHONE, EMP_STATUS, STATUS_EFF, F15B5_LAB_LAB_ID, EXEC_DIR_FLAG, LAB_DIR_FLAG, ADMIN_FLAG, CHAIR_FLAG, F15B5_AUTH_AUTH_ID) 
+	VALUES (4, 'Adam Jackson', 'AJackson@gmail.com', 'B200', '512-266-2990', 'A', '6-07-2006', 20, '', 'Y', '', '', 2);
+INSERT INTO F15B5_EMP (EMP_ID, ENAME, EMP_EMAIL, EMP_OFFICE, EMP_PHONE, EMP_STATUS, STATUS_EFF, F15B5_LAB_LAB_ID, EXEC_DIR_FLAG, LAB_DIR_FLAG, ADMIN_FLAG, CHAIR_FLAG, F15B5_AUTH_AUTH_ID) 
+	VALUES (5, 'Lilly Johnson', 'Lilj@gmail.com', 'B300', '512-222-4679', 'A', '9-10-2012', 20, '', '', 'Y', '', 2);
+INSERT INTO F15B5_EMP (EMP_ID, ENAME, EMP_EMAIL, EMP_OFFICE, EMP_PHONE, EMP_STATUS, STATUS_EFF, F15B5_LAB_LAB_ID, EXEC_DIR_FLAG, LAB_DIR_FLAG, ADMIN_FLAG, CHAIR_FLAG, F15B5_AUTH_AUTH_ID) 
+	VALUES (6, 'Oliver Smith', 'Osmitty@gmail.com', 'B400', '512-933-1234', 'A', '8-9-2010', 20, '', '', '', '', 1);
+
+INSERT INTO F15B5_STATUS (STATUS_ID, RFE_STATUS, DESCRIPTION) 
+	VALUES (1, 'Entered', 'The RFE has been created but has not yet been submitted for approval.');
+INSERT INTO F15B5_STATUS (STATUS_ID, RFE_STATUS, DESCRIPTION) 
+	VALUES (2, 'Submitted', 'The RFE has been submitted to the Lab System Administrator for approval.');
+INSERT INTO F15B5_STATUS (STATUS_ID, RFE_STATUS, DESCRIPTION) 
+	VALUES (3, 'Returned', 'The RFE has been returned for further information or clarification. Once Submitted again, it will follow the same routing as an Entered RFE.');
+INSERT INTO F15B5_STATUS (STATUS_ID, RFE_STATUS, DESCRIPTION) 
+	VALUES (4, 'Recalled', 'The requestor has recalled an RFE that has not yet reached final approval. Once Submitted again, it will follow the same routing as an Entered RFE.');
+INSERT INTO F15B5_STATUS (STATUS_ID, RFE_STATUS, DESCRIPTION) 
+	VALUES (5, 'Rejected', 'The RFE has been rejected and cannot be implemented.');
+INSERT INTO F15B5_STATUS (STATUS_ID, RFE_STATUS, DESCRIPTION) 
+	VALUES (6, 'SA approved', 'The Lab System Administrator has approved the RFE; it has been submitted for Lab Director approval.');
+INSERT INTO F15B5_STATUS (STATUS_ID, RFE_STATUS, DESCRIPTION) 
+	VALUES (7, 'LD approved', 'The Lab Director has approved the RFE; it has been submitted for Network Security Panel approval.');
+INSERT INTO F15B5_STATUS (STATUS_ID, RFE_STATUS, DESCRIPTION) 
+	VALUES (8, 'CH approved', 'The Lab Director has approved the RFE; it has been submitted to the Chairperson of Security Panel approval.');
+INSERT INTO F15B5_STATUS (STATUS_ID, RFE_STATUS, DESCRIPTION) 
+	VALUES (9, 'Final approved', 'The Executive Director`s Office has given final approval for the RFE and it may be implemented.');
+
+INSERT INTO F15B5_RFE (RFE_ID, EXPLANATION, ALT_PROTECT, APPROVAL_REV, F15B5_STATUS_STATUS_ID, F15B5_EMP_EMP_ID) 
+	VALUES (1, 'Firewall exception needed to access site.', 'N/a', '', 1, 3);
+INSERT INTO F15B5_RFE (RFE_ID, EXPLANATION, ALT_PROTECT, APPROVAL_REV, F15B5_STATUS_STATUS_ID, F15B5_EMP_EMP_ID) 
+	VALUES (2, 'Need admin rights to download software', 'limit to 5 hours', '', 2, 5);
+
+INSERT INTO F15B5_COMM (COMM_ID, COMMENTS, F15B5_EMP_EMP_ID, F15B5_RFE_RFE_ID) 
+	VALUES ('Need to download python', 5, 2);
+
+INSERT INTO APPROVERS (F15B5_RFE_RFE_ID, F15B5_EMP_EMP_ID) VALUES (1, 1);
+INSERT INTO APPROVERS (F15B5_RFE_RFE_ID, F15B5_EMP_EMP_ID) VALUES (1, 2);
+INSERT INTO APPROVERS (F15B5_RFE_RFE_ID, F15B5_EMP_EMP_ID) VALUES (1, 4);
+INSERT INTO APPROVERS (F15B5_RFE_RFE_ID, F15B5_EMP_EMP_ID) VALUES (1, 5);
+INSERT INTO APPROVERS (F15B5_RFE_RFE_ID, F15B5_EMP_EMP_ID) VALUES (2, 1);
+INSERT INTO APPROVERS (F15B5_RFE_RFE_ID, F15B5_EMP_EMP_ID) VALUES (2, 2);
+INSERT INTO APPROVERS (F15B5_RFE_RFE_ID, F15B5_EMP_EMP_ID) VALUES (2, 4);
+INSERT INTO APPROVERS (F15B5_RFE_RFE_ID, F15B5_EMP_EMP_ID) VALUES (2, 5);
+
+INSERT INTO CONTACTS (F15B5_RFE_RFE_ID, F15B5_EMP_EMP_ID) VALUES (1, 6);
+
+
+
+-- Enable the PK triggers on the sample data tables using the following statement:
+alter trigger F15B5_RFE_PK_trig enable; -- for example - alter trigger DEPT_VIEW_TRIGGER enable;
+alter trigger F15B5_auth_PK_trig enable;
+alter trigger F15B5_comm_PK_trig enable;
+alter trigger F15B5_doc_PK_trig enable;
+alter trigger F15B5_emp_PK_trig enable;
+alter trigger F15B5_hist_PK_trig enable;
+alter trigger F15B5_lab_PK_trig enable;
+alter trigger F15B5_status_PK_trig enable;
+alter trigger F15B5_task_PK_trig enable;
