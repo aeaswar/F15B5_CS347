@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B7B3252D-51BF-DF98-153F-61625123B98E" name="F15B5_comm">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-02 22:36:29 UTC</createdTime>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="comm_id" id="6C80EAB9-9DBB-BCDB-BC57-47FA0FB3623C">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-02 22:36:34 UTC</createdTime>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rfe_id" id="06B9F056-DA77-FE0E-AD3B-AFD132B49C1C">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-02 22:37:05 UTC</createdTime>
+<generatorID>303AC857-7E00-014F-9F9D-6399E1D804B2</generatorID>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<referedAttribute>4214C16D-886A-D632-3071-0B13685E90C0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="emp_id" id="D11DA2E6-0888-0833-6AFC-AFEEFBBBC4B9">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-02 22:41:48 UTC</createdTime>
+<generatorID>2BC22FD6-F37D-EE40-96AF-52F98C0F7CBB</generatorID>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<referedAttribute>7CEF8030-3AA7-A9D3-42B1-D7D1BFB31158</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="entry_date" id="05AF25A8-B88F-3426-3531-E414FF8424FB">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:04:38 UTC</createdTime>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comments" id="BA3695CE-5B9E-E971-857A-7423DF53476D">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:04:50 UTC</createdTime>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1300A0EB-D577-A123-EFF7-1368E236265D" name="F15B5_comment PK">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-02 22:36:41 UTC</createdTime>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6C80EAB9-9DBB-BCDB-BC57-47FA0FB3623C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

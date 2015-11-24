@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D1A9B78F-F0FC-C85F-0EEE-85728E978C7A" name="Assignments">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-24 02:57:14 UTC</createdTime>
+<ownerDesignName>Assign_class</ownerDesignName>
+<engineerTo>
+<item key="95A6E385-2050-2FC1-C428-27AA42481601" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="assign_id" id="72D6118B-CA1D-B54D-5155-8B60B9C5F743">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-24 02:57:22 UTC</createdTime>
+<ownerDesignName>Assign_class</ownerDesignName>
+<engineerTo>
+<item key="95A6E385-2050-2FC1-C428-27AA42481601" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="type" id="9F266881-D936-C9B0-9584-A344C83D480E">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-24 02:57:44 UTC</createdTime>
+<ownerDesignName>Assign_class</ownerDesignName>
+<engineerTo>
+<item key="95A6E385-2050-2FC1-C428-27AA42481601" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="C431CF75-4791-3C0B-E2D7-8CF06C2E894D">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-24 02:57:33 UTC</createdTime>
+<ownerDesignName>Assign_class</ownerDesignName>
+<engineerTo>
+<item key="95A6E385-2050-2FC1-C428-27AA42481601" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date_given" id="2637EFE3-C224-C04F-8C38-63F5656B284F">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-24 02:58:01 UTC</createdTime>
+<ownerDesignName>Assign_class</ownerDesignName>
+<engineerTo>
+<item key="95A6E385-2050-2FC1-C428-27AA42481601" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date_due" id="E2E841A1-626B-2DB8-3B9E-39FA4EE11EE9">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-24 02:58:29 UTC</createdTime>
+<ownerDesignName>Assign_class</ownerDesignName>
+<engineerTo>
+<item key="95A6E385-2050-2FC1-C428-27AA42481601" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="grade" id="1B5A78FB-E00F-55AF-C725-729B42FFFF25">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-24 02:58:38 UTC</createdTime>
+<ownerDesignName>Assign_class</ownerDesignName>
+<engineerTo>
+<item key="95A6E385-2050-2FC1-C428-27AA42481601" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comments" id="C5F0F7F1-EA34-14B8-C407-311B4FF16E89">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-24 02:58:47 UTC</createdTime>
+<ownerDesignName>Assign_class</ownerDesignName>
+<engineerTo>
+<item key="95A6E385-2050-2FC1-C428-27AA42481601" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="class_id" id="E478AD58-E034-565C-06FB-1CF783E4CD0F">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-24 03:02:11 UTC</createdTime>
+<generatorID>36F874F2-9411-DFB3-C788-AD09D3D7ECB9</generatorID>
+<ownerDesignName>Assign_class</ownerDesignName>
+<engineerTo>
+<item key="95A6E385-2050-2FC1-C428-27AA42481601" value="true"/>
+</engineerTo>
+<referedAttribute>B0A96F9D-E3A6-A16A-96D1-82F8F473A6F7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="670580B1-56DA-EFD3-D69A-378EA19A04D6" name="Assignments PK">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-24 02:57:31 UTC</createdTime>
+<ownerDesignName>Assign_class</ownerDesignName>
+<engineerTo>
+<item key="95A6E385-2050-2FC1-C428-27AA42481601" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>72D6118B-CA1D-B54D-5155-8B60B9C5F743</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

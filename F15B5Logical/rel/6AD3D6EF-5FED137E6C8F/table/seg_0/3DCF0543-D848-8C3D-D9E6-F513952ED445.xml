@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3DCF0543-D848-8C3D-D9E6-F513952ED445" name="F15B5_doc">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>15B67798-170F-F5EB-CB04-2D3581DE0B49</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="doc_id" id="05641015-F701-5FF7-22CF-1D3BDAF89C72">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>6D1A923A-7F0C-19F2-F22F-CF30344AF517</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="filename" id="581CD966-80C8-0F1F-CE12-4C0F1CC83123">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>E0A0FCB7-E518-7197-8E55-F9B9AD075D68</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="F15B5_RFE_rfe_id" id="753A4CB3-D4C3-7F73-F101-8CAAFF5A47B3">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>AB6E11A6-2188-7080-9CE8-565792FF08D5</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C99EF8D4-162F-E551-8338-14BDDDDD0143" referredColumn="E73C961C-2795-81C2-C654-A595F986032A"/>
+</associations>
+</Column>
+<Column name="mimetype" id="F6A2BFC9-721D-B8D7-55BD-43BB98C8F60D">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-19 21:53:05 UTC</createdTime>
+<generatorID>DE431C9F-8CF3-1274-02F1-A563041DDBC3</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512</dataTypeSize>
+<ownDataTypeParameters>512,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="charset" id="6441EBF8-AD08-07C4-3668-3780FF8FB634">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-19 21:53:05 UTC</createdTime>
+<generatorID>7D6F635F-6C75-6A8D-ABAB-7BC9D05EE2E1</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512</dataTypeSize>
+<ownDataTypeParameters>512,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_blob" id="A8916598-C4BE-335E-B2D3-51486803FCA1">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-19 21:53:05 UTC</createdTime>
+<generatorID>1D9D31B8-1CF1-710E-3DE7-35A40244F324</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_com" id="8BE70E6C-2CB3-036A-1542-A9A2DF70A2C2">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-19 21:53:05 UTC</createdTime>
+<generatorID>2E412302-C41F-3058-A25E-42807672662F</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tags" id="BB4D477C-BE3C-1CBC-A4B0-AA1D2D3654ED">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-19 21:53:05 UTC</createdTime>
+<generatorID>D48BC465-B5E5-1E39-B6E1-F95C577E33BF</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4D79B7DB-044C-DC23-A4E3-D7F4A7048A12" name="F15B5_doc_PK">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>674F2605-F2CE-721B-1393-647D142BD984</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05641015-F701-5FF7-22CF-1D3BDAF89C72"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7FD0FCD2-69FC-D6E9-01B5-BFF194D41250" name="F15B5_doc_F15B5_RFE_FK">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>FABC6B42-3F38-11B2-D203-B366314CEABC</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="753A4CB3-D4C3-7F73-F101-8CAAFF5A47B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

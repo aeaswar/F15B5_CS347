@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A30030BB-6D46-DD8B-F942-2495C513174D" name="F15B5_RFE">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:29:14 UTC</createdTime>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<engineerTo>
+<item key="6AD3D6EF-D02A-6BA9-9362-5FED137E6C8F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="rfe_id" id="FB1C6143-0FD9-A9DD-1C28-07384E856D13">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:29:14 UTC</createdTime>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<importedID>4214C16D-886A-D632-3071-0B13685E90C0</importedID>
+<engineerTo>
+<item key="6AD3D6EF-D02A-6BA9-9362-5FED137E6C8F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="explanation" id="DA8EABE7-A44E-9499-8A4E-C1A77D1F8B1F">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:29:14 UTC</createdTime>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<importedID>004D8FE3-1B15-AAC5-7303-E0CFAE82E4DE</importedID>
+<engineerTo>
+<item key="6AD3D6EF-D02A-6BA9-9362-5FED137E6C8F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="alt_protect" id="C19A2AFF-B65A-9220-BDD2-A62548C3A0AC">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:29:14 UTC</createdTime>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<importedID>1EAD619E-7F27-3727-48C7-66AE609AED11</importedID>
+<engineerTo>
+<item key="6AD3D6EF-D02A-6BA9-9362-5FED137E6C8F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="approval_rev" id="3D0BAA2D-0FD4-1F75-153A-1287971E218C">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:29:14 UTC</createdTime>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<importedID>6EDEE23B-F013-CCDF-9AF4-5F8E6DAB4EA1</importedID>
+<engineerTo>
+<item key="6AD3D6EF-D02A-6BA9-9362-5FED137E6C8F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status_id" id="666BFB33-94F8-65EB-E628-1853C6F7FDA1">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:29:14 UTC</createdTime>
+<generatorID>D73B89AF-9C95-4DAA-9D7A-3DB0DDA94AE0</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<importedID>B8070D13-FC00-F58C-6DCE-D4637AFD4117</importedID>
+<engineerTo>
+<item key="6AD3D6EF-D02A-6BA9-9362-5FED137E6C8F" value="true"/>
+</engineerTo>
+<referedAttribute>624BA6BB-F102-89E6-0FC8-1E9D9F294773</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="emp_id" id="6F7A8075-86E4-7270-6C14-DEC8FECB7664">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:40:37 UTC</createdTime>
+<generatorID>67BC381F-D658-0FFD-D682-99861240BF32</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<engineerTo>
+<item key="6AD3D6EF-D02A-6BA9-9362-5FED137E6C8F" value="true"/>
+</engineerTo>
+<referedAttribute>8A20AB75-86ED-EFD5-C3AE-54DA158050E1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BCFC3384-685D-DC89-DC82-BC78D54663CB" name="F15B5_RFE PK">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:29:14 UTC</createdTime>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="6AD3D6EF-D02A-6BA9-9362-5FED137E6C8F" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FB1C6143-0FD9-A9DD-1C28-07384E856D13</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

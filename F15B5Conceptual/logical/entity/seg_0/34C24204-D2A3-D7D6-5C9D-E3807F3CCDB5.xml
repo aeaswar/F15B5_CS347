@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="34C24204-D2A3-D7D6-5C9D-E3807F3CCDB5" name="F15B5_RFE">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-02 22:24:04 UTC</createdTime>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="rfe_id" id="4214C16D-886A-D632-3071-0B13685E90C0">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-02 22:24:14 UTC</createdTime>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="explanation" id="004D8FE3-1B15-AAC5-7303-E0CFAE82E4DE">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:10:51 UTC</createdTime>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="alt_protect" id="1EAD619E-7F27-3727-48C7-66AE609AED11">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:11:09 UTC</createdTime>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="approval_rev" id="6EDEE23B-F013-CCDF-9AF4-5F8E6DAB4EA1">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:11:31 UTC</createdTime>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="emp_id" id="07DDCB6A-540B-B097-C3B3-E99855602A89">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-02 22:25:04 UTC</createdTime>
+<generatorID>EDAA38F2-EDA1-8133-0284-915D97356F1E</generatorID>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<referedAttribute>7CEF8030-3AA7-A9D3-42B1-D7D1BFB31158</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status_id" id="B8070D13-FC00-F58C-6DCE-D4637AFD4117">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-02 22:30:07 UTC</createdTime>
+<generatorID>5628DB91-7C3A-2F73-057F-AEC53BC68B43</generatorID>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<referedAttribute>CC631DB1-24FB-2454-B0E9-436908588F89</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D5949064-EE28-9ABA-D31B-9895AAF68252" name="F15B5_RFE PK">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-02 22:24:21 UTC</createdTime>
+<ownerDesignName>F15B5Conceptual</ownerDesignName>
+<engineerTo>
+<item key="C241208B-4A5F-19CC-8482-36A3FF220954" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4214C16D-886A-D632-3071-0B13685E90C0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

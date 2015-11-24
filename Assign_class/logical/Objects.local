@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="D1A9B78F-F0FC-C85F-0EEE-85728E978C7A" name="Assignments" seqName="seg_0"/>
+   <object objectType="Entity" objectID="4B0C88D9-E37F-AE83-9D0E-0C448B61DF01" name="Class" seqName="seg_0"/>
+   <object objectType="Relation" objectID="36F874F2-9411-DFB3-C788-AD09D3D7ECB9" name="Relation_2" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

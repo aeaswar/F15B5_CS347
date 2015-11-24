@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F5E6E1B9-3544-8155-575D-86F43E3AFE64" name="F15B5_RFE">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>A30030BB-6D46-DD8B-F942-2495C513174D</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="rfe_id" id="E73C961C-2795-81C2-C654-A595F986032A">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>FB1C6143-0FD9-A9DD-1C28-07384E856D13</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="explanation" id="9FE1F59A-5C8C-78C4-8C07-12D722630148">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>DA8EABE7-A44E-9499-8A4E-C1A77D1F8B1F</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="alt_protect" id="ADCA5559-88CB-4BFD-BDE0-E8483A5D1A4D">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>C19A2AFF-B65A-9220-BDD2-A62548C3A0AC</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="approval_rev" id="99DFED77-61A4-2FEB-BF7C-1F189E5F6F93">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>3D0BAA2D-0FD4-1F75-153A-1287971E218C</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="F15B5_status_status_id" id="1741D695-030B-BAF6-4C5F-9F7012E5BFF5">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>666BFB33-94F8-65EB-E628-1853C6F7FDA1</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="72E87218-474B-86BA-A873-3E2EF90B3A7D" referredColumn="6F0C0389-C880-BC55-4387-D1E121CD35CD"/>
+</associations>
+</Column>
+<Column name="F15B5_emp_emp_id" id="49BDEBB5-7CC9-54B1-B34F-5C8F48E2F823">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>6F7A8075-86E4-7270-6C14-DEC8FECB7664</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1B7E3021-241B-4793-F7FE-149E38B79DBD" referredColumn="CE7A4FEE-6C57-AC6B-A191-928D241F9E37"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="13D27326-4C63-CACC-63D3-79045C1B6B79" name="F15B5_RFE_PK">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>BCFC3384-685D-DC89-DC82-BC78D54663CB</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E73C961C-2795-81C2-C654-A595F986032A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C4066CF5-80DC-3A6F-CFEA-966A0E192973" name="F15B5_RFE_F15B5_status_FK">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>D73B89AF-9C95-4DAA-9D7A-3DB0DDA94AE0</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1741D695-030B-BAF6-4C5F-9F7012E5BFF5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3BC5DD5E-2792-C134-9815-954E20BA70C6" name="F15B5_RFE_F15B5_emp_FK">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>67BC381F-D658-0FFD-D682-99861240BF32</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="49BDEBB5-7CC9-54B1-B34F-5C8F48E2F823"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B58FEFB9-BCAB-033F-2C50-79C6A8E30E41" name="F15B5_lab">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:29:14 UTC</createdTime>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<engineerTo>
+<item key="6AD3D6EF-D02A-6BA9-9362-5FED137E6C8F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="lab_id" id="B6770972-7869-EEA3-A403-F91228269F65">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:29:14 UTC</createdTime>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<importedID>993E9373-214D-20E6-17B1-C4859CB53EC9</importedID>
+<engineerTo>
+<item key="6AD3D6EF-D02A-6BA9-9362-5FED137E6C8F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lab_name" id="A2AC29D0-9C72-CCFA-7774-809604E12D06">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-21 22:15:59 UTC</createdTime>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<engineerTo>
+<item key="6AD3D6EF-D02A-6BA9-9362-5FED137E6C8F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B5110FE0-255B-0C13-B6B9-F452ABAFDC7E" name="F15B5_lab PK">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-12 21:29:14 UTC</createdTime>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="6AD3D6EF-D02A-6BA9-9362-5FED137E6C8F" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B6770972-7869-EEA3-A403-F91228269F65</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

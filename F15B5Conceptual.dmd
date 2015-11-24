@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="F15.B5.NewConceptual" id="FE625D33-0ABC-E323-E8A3-A3FD6AE373E9" version="3.5">
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="F15B5Conceptual" id="FE625D33-0ABC-E323-E8A3-A3FD6AE373E9" version="3.5">
 <createdBy>ankita</createdBy>
 <createdTime>2015-11-02 22:02:23 UTC</createdTime>
 <ownerDesignName>F15.B5.NewConceptual</ownerDesignName>

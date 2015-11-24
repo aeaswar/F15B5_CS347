@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BD261C22-D984-6F35-39F3-D303CABF4111" name="F15B5_auth">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-21 23:34:40 UTC</createdTime>
+<generatorID>67FD911E-E341-6522-8962-7BF197CE22CB</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<ordsAlias>f15b5_authv1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="auth_id" id="23B9ABCE-6322-B2EA-6F92-0E131B295444">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-21 23:34:40 UTC</createdTime>
+<generatorID>7A1333BD-0F0E-20AF-7FCE-A381EF1B62F7</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="right" id="E5D9CD19-7BC2-EC05-3861-5265B07D980F">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-21 23:34:40 UTC</createdTime>
+<generatorID>97A6F076-1118-B018-EC13-730674CD3D4B</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B060416F-1B64-78B9-5466-B584B64C7B12" name="F15B5_auth_PK">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-21 23:34:40 UTC</createdTime>
+<generatorID>50081BAC-4AAB-5D86-F681-DB241BF397A2</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="23B9ABCE-6322-B2EA-6F92-0E131B295444"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9D31E6AC-8E0B-6491-F7A7-B55948FC7E30" name="contacts">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>07161840-BE6D-B4A7-AB2D-2AFFFDF86A20</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="F15B5_RFE_rfe_id" id="C7274621-951B-3DB7-BCF7-883E98411D55">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>7EC03F5F-FAEC-1DBA-1621-73138D839622</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AC28D467-4584-EB46-C023-8F2EC0168239" referredColumn="E73C961C-2795-81C2-C654-A595F986032A"/>
+</associations>
+</Column>
+<Column name="F15B5_emp_emp_id" id="36C4957F-D3F4-F79F-F989-3DFFB6B6252D">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>95650095-099D-F53D-A7DC-3D0C7D221426</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="499726F3-3B18-624D-5FED-75FC0E124CE2" referredColumn="CE7A4FEE-6C57-AC6B-A191-928D241F9E37"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A2F018F6-9897-FB7A-48FC-D02471F97FBB" name="contacts_F15B5_RFE_FK">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>A117A518-4F09-61D5-8F6F-1D99A20365E5</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7274621-951B-3DB7-BCF7-883E98411D55"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3E2B6A88-033B-54F5-AEF3-38C014B7E7A9" name="contacts_F15B5_emp_FK">
+<createdBy>ankita</createdBy>
+<createdTime>2015-11-14 04:24:09 UTC</createdTime>
+<generatorID>F0D401DB-2C57-F020-6593-06C012A7BB5B</generatorID>
+<ownerDesignName>F15B5Logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36C4957F-D3F4-F79F-F989-3DFFB6B6252D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
