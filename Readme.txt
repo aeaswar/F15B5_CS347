@@ -11,6 +11,7 @@ Presentation URL:
 https://docs.google.com/presentation/d/1pGXwCxoCd9eDGrg96wKySRqTPr_gTho4Xlzo_fobo_o/edit?usp=sharing
 
 APEX Part 1 URL:
+https://apex.oracle.com/pls/apex/f?p=99040:1:110371348417200:::::
 
 APEX Part 2 URL:
 https://apex.oracle.com/pls/apex/f?p=93435:2:13962599725065:::::
